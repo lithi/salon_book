@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @salon.name %>
+</p>
+
+<p>
+  <strong>Tel:</strong>
+  <%= @salon.tel %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @salon.address %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @salon.image %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @salon.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_salon_path(@salon) %> |
+<%= link_to 'Back', salons_path %>

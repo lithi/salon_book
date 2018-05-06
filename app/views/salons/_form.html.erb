@@ -1,0 +1,9 @@
+<%= simple_form_for @salon do |f| %>
+  <%= f.input :name %>
+  <%= f.input :tel %>
+  <%= f.input :address %>
+  <%= f.input :image %>
+  <%= f.input :user_id %>
+  <%= f.association :services %>
+  <%= f.button :submit %>
+<% end %>
