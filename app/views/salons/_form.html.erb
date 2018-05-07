@@ -5,6 +5,5 @@
   <%= f.association :user, as: :radio_buttons %>
   <%= f.association :services, as: :check_boxes %>
   <%= f.input :images, as: :file, input_html: {multiple: true} %>
-  <%#= f.file_field :images, multiple: true %>
   <%= f.button :submit %>
 <% end %>
