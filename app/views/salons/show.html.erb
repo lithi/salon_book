@@ -15,14 +15,14 @@
   <%= @salon.address %>
 </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @salon.image %>
-</p>
+<!--<p>-->
+<!--  <strong>Image:</strong>-->
+  <%#= @salon.image %>
+<!--</p>-->
 
 <p>
   <strong>User:</strong>
-  <%= @salon.user_id %>
+  <%= User.find(@salon.user_id).name %>
 </p>
 
 <%= link_to 'Edit', edit_salon_path(@salon) %> |

@@ -1,32 +1,6 @@
-<%= form_with(model: service, local: true) do |form| %>
-  <% if service.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(service.errors.count, "error") %> prohibited this service from being saved:</h2>
-
-      <ul>
-      <% service.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
-  </div>
-
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.number_field :category_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<%= simple_form_for @service do |f| %>
+  <%= f.input :name %>
+  <%#= f.input :image %>
+  <%= f.association :category, as: :radio_buttons %>
+  <%= f.button :submit %>
 <% end %>

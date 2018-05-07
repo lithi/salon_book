@@ -8,7 +8,7 @@
       <th>Name</th>
       <th>Tel</th>
       <th>Address</th>
-      <th>Image</th>
+<!--      <th>Image</th>-->
       <th>User</th>
       <th colspan="3"></th>
     </tr>
@@ -20,8 +20,8 @@
         <td><%= salon.name %></td>
         <td><%= salon.tel %></td>
         <td><%= salon.address %></td>
-        <td><%= salon.image %></td>
-        <td><%= salon.user_id %></td>
+<!--        <td><%#= salon.image %></td>-->
+        <td><%= User.find(salon.user_id).name %></td>
         <td><%= link_to 'Show', salon %></td>
         <td><%= link_to 'Edit', edit_salon_path(salon) %></td>
         <td><%= link_to 'Destroy', salon, method: :delete, data: { confirm: 'Are you sure?' } %></td>

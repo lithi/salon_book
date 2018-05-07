@@ -2,8 +2,8 @@
   <%= f.input :name %>
   <%= f.input :tel %>
   <%= f.input :address %>
-  <%= f.input :image %>
-  <%= f.input :user_id %>
-  <%= f.association :services %>
+  <%#= f.input :image %>
+  <%= f.association :user, as: :radio_buttons %>
+  <%= f.association :services, as: :check_boxes %>
   <%= f.button :submit %>
 <% end %>
