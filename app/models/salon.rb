@@ -5,5 +5,6 @@ class Salon < ApplicationRecord
 
   accepts_nested_attributes_for :salon_services
 
-  mount_uploader :image, ImageUploader
+  mount_uploaders :images, ImageUploader
+  serialize :images, JSON
 end

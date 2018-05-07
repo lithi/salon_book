@@ -69,6 +69,6 @@ class SalonsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
   def salon_params
-    params.require(:salon).permit(:name, :tel, :address, :image, :user_id, { :service_ids => [] })
+    params.require(:salon).permit(:name, :tel, :address, {images: []}, :user_id, {service_ids: []})
   end
 end

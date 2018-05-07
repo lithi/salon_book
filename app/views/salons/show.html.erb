@@ -18,7 +18,10 @@
 <p>
   <strong>Image:</strong>
   <%#= @salon.image %>
-<%= image_tag @salon.image.url %>
+
+<%rails @salon.images.each do |i| %>
+    <%= image_tag i.url %>
+<% end  %>
 </p>
 
 <p>
