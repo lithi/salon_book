@@ -4,4 +4,6 @@ class Salon < ApplicationRecord
   has_many :services, through: :salon_services, class_name: 'Service'
 
   accepts_nested_attributes_for :salon_services
+
+  mount_uploader :image, ImageUploader
 end

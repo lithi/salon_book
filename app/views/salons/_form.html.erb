@@ -4,6 +4,7 @@
   <%= f.input :address %>
   <%#= f.input :image %>
   <%= f.association :user, as: :radio_buttons %>
+  <%= f.input :image, as: :file %>
   <%= f.association :services, as: :check_boxes %>
   <%= f.button :submit %>
 <% end %>

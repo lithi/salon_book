@@ -15,10 +15,11 @@
   <%= @salon.address %>
 </p>
 
-<!--<p>-->
-<!--  <strong>Image:</strong>-->
+<p>
+  <strong>Image:</strong>
   <%#= @salon.image %>
-<!--</p>-->
+<%= image_tag @salon.image.url %>
+</p>
 
 <p>
   <strong>User:</strong>
