@@ -15,7 +15,7 @@ ENV TZ=Asia/Tehran \
 
 # Install the required packages. Find any additional packages from [the Alpine
 # package explorer](https://pkgs.alpinelinux.org/packages)
-RUN apk update && \
+RUN apk update && apk upgrade && \
     apk add tzdata curl bash ca-certificates rsync supervisor nginx \
             build-base yarn libffi-dev libxml2-dev libxslt-dev nodejs $DB_PACKAGES \
             ruby ruby-dev ruby-bundler ruby-irb ruby-json ruby-bigdecimal ruby-nokogiri && \
@@ -55,7 +55,7 @@ COPY supervisord.conf /
 # Run bundle install. Use system-libraries for nokogiri so it installs faster.
 # Remove the nokogiri config if you're not using nokogiri.
 #RUN bundle config build.nokogiri --use-system-libraries && \
-RUN gem update bundler
+
 RUN bundle install --without test development
 
 # Copy the application files. Initially copy them to a temp directory so their
