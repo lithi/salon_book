@@ -54,7 +54,8 @@ COPY supervisord.conf /
 
 # Run bundle install. Use system-libraries for nokogiri so it installs faster.
 # Remove the nokogiri config if you're not using nokogiri.
-#RUN bundle config build.nokogiri --use-system-libraries &&
+#RUN bundle config build.nokogiri --use-system-libraries && \
+RUN gem update bundler
 RUN bundle install --without test development
 
 # Copy the application files. Initially copy them to a temp directory so their
