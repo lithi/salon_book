@@ -7,9 +7,9 @@ FROM alpine:3.6
 # * `RAILS_ROOT` If you are using Rails, this sets the Rails root directory.
 # * `HOME` The path to the app. For Rails this is the same as `RAILS_ROOT`.
 # * `DB_PACKAGES` Any database packages you use. To decrease the size of the
-    Dockerfile only install the DB packages you need.
+#    Dockerfile only install the DB packages you need.
 ENV TZ=Asia/Tehran \
-    RAILS_ROOT=/usr/src/app \
+    RAILS_ROOT=/usr/src/gunehapp \
     HOME=$RAILS_ROOT \
     DB_PACKAGES="sqlite-dev postgresql-dev mysql-dev"
 
