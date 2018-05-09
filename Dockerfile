@@ -11,7 +11,7 @@ FROM alpine:3.6
 ENV TZ=Asia/Tehran \
     RAILS_ROOT=/usr/src/app \
     HOME=$RAILS_ROOT \
-    DB_PACKAGES="sqlite-dev postgresql-dev"
+    DB_PACKAGES="sqlite-dev postgresql-dev mysql-dev"
 
 # Install the required packages. Find any additional packages from [the Alpine
 # package explorer](https://pkgs.alpinelinux.org/packages)
@@ -75,4 +75,4 @@ RUN chgrp -R 0 /tmp/app && \
 CMD ["./start.sh"]
 
 # Specify the default user for the Docker image to run as.
-USER appuser
+USER 1001
