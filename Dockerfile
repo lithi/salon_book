@@ -9,9 +9,9 @@ FROM alpine:3.6
 # * `DB_PACKAGES` Any database packages you use. To decrease the size of the
 #    Dockerfile only install the DB packages you need.
 ENV TZ=Asia/Tehran \
-    RAILS_ROOT=/usr/src/gunehapp \
+    RAILS_ROOT=/usr/src/app \
     HOME=$RAILS_ROOT \
-    DB_PACKAGES="sqlite-dev postgresql-dev mysql-dev"
+    DB_PACKAGES="sqlite-dev postgresql-dev"
 
 # Install the required packages. Find any additional packages from [the Alpine
 # package explorer](https://pkgs.alpinelinux.org/packages)
@@ -43,7 +43,7 @@ RUN apk update && \
 # Other ports that need to be opened can be added here (only ports above 1024), separated by spaces.
 EXPOSE 8080
 # Set the current directory for the Docker image.
-WORKDIR $HOME
+WORKDIR /usr/src/app \
 
 # Copy the required configuration files into the Docker image. Don't copy the
 # application files yet as they prevent `bundle install` from being cached by
