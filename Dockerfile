@@ -61,15 +61,15 @@ COPY supervisord.conf /
 # permissions can be updated and then copy them to the target directory. This
 # reduces the size of the Docker image.
 COPY . /tmp/app
-RUN chgrp -R 0 /tmp/app && \
-    chmod -R g=u /tmp/app && \
-    cp -a /tmp/app/. . && \
-    rm -rf /tmp/app && \
-    chmod +x start.sh && \
+RUN chgrp -R 0 /tmp/app
+RUN    chmod -R g=u /tmp/app
+RUN    cp -a /tmp/app/. .
+RUN    rm -rf /tmp/app
+RUN    chmod +x start.sh
     # Compile Rails assets. Remove this if you are not using Rails.
-    bundle exec rake assets:precompile && \
+RUN    bundle exec rake assets:precompile
     # Ensure Rails logs are writeable. Remove this if you are not using Rails.
-    mkdir -p log && chgrp -R 0 log && chmod -R g=u log
+RUN    mkdir -p log && chgrp -R 0 log && chmod -R g=u log
 
 # Specify the command to run when the container starts.
 CMD ["./start.sh"]
