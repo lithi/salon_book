@@ -18,7 +18,7 @@ ENV TZ=Asia/Tehran \
 RUN apk update && apk upgrade && \
     apk add tzdata curl bash ca-certificates rsync supervisor nginx \
             build-base yarn libffi-dev libxml2-dev libxslt-dev nodejs $DB_PACKAGES \
-            ruby ruby-dev ruby-bundler ruby-irb ruby-json ruby-bigdecimal ruby-nokogiri && \
+            ruby ruby-dev ruby-bundler ruby-irb ruby-json ruby-bigdecimal && \
     # Set the timezone based on the `TZ` variable above.
     cp /usr/share/zoneinfo/${TZ} /etc/localtime && \
     echo "${TZ}" > /etc/timezone && \
