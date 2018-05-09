@@ -55,7 +55,7 @@ COPY supervisord.conf /
 # Run bundle install. Use system-libraries for nokogiri so it installs faster.
 # Remove the nokogiri config if you're not using nokogiri.
 #RUN bundle config build.nokogiri --use-system-libraries && \
-#    bundle install --without test development
+    bundle install --without test development
 
 # Copy the application files. Initially copy them to a temp directory so their
 # permissions can be updated and then copy them to the target directory. This
