@@ -5,11 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/test/models/salon_test.rb" line="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2ecac18-e0b1-4ae5-b776-81822ffbe026" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-    </list>
+    <list default="true" id="b2ecac18-e0b1-4ae5-b776-81822ffbe026" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -28,8 +24,8 @@
       <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+            <state relative-caret-position="810">
+              <caret line="54" column="51" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -57,6 +53,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>$RAILS_ROOT</find>
+      <find>noko</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -271,12 +268,12 @@
       <workItem from="1525715190265" duration="7618000" />
       <workItem from="1525773290204" duration="419000" />
       <workItem from="1525860216145" duration="4624000" />
-      <workItem from="1525879968982" duration="13194000" />
+      <workItem from="1525879968982" duration="13969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40545000" />
+    <option name="totallyTimeSpent" value="41320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1373" height="875" extended-state="6" />
@@ -648,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+        <state relative-caret-position="810">
+          <caret line="54" column="51" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="51" />
         </state>
       </provider>
     </entry>
