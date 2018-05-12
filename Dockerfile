@@ -13,10 +13,6 @@ WORKDIR $RAILS_ROOT
 COPY . .
 RUN bundle install
 
-
-RUN chgrp -R 0        /usr/src/app/log/development.log
-RUN chmod -R g=u,a+rx /usr/src/app/log/development.log
-
 EXPOSE 8080
 USER 1001
 
