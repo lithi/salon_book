@@ -6,8 +6,8 @@ ENV RAILS_ROOT /usr/src/app
 WORKDIR $RAILS_ROOT
 
 RUN mkdir -p /var/log /var/tmp && $RAILS_ROOT \
-    chgrp -R 0        /var/log /var/run /var/tmp /usr/src/app && \
-    chmod -R g=u,a+rx /var/log /var/run /var/tmp /usr/src/app && \
+    chgrp -R 0        /var/log /var/run /var/tmp /usr/src/app && $RAILS_ROOT \
+    chmod -R g=u,a+rx /var/log /var/run /var/tmp /usr/src/app && $RAILS_ROOT \
 
 
 COPY . .
