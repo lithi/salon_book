@@ -16,7 +16,7 @@ RUN bundle install
 EXPOSE 3000
 USER 1001
 
-exec puma -C config/puma.rb;
+RUN puma -C config/puma.rb;
 
 
 
