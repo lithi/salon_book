@@ -1,7 +1,7 @@
 
 FROM ruby:2.5
 
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev postgresql-client 
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev postgresql-client nodejs
 
 ENV RAILS_ROOT /usr/src/app
 
