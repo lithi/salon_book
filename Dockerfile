@@ -14,10 +14,9 @@ COPY . .
 RUN bundle install
 RUN exec bundle exec puma -C config/containers/puma.rb;
 
-
-
-
 USER 1001
+
+CMD ["rails", "server", "-b", "0.0.0.0"]
 
 
 
