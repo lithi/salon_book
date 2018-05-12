@@ -8,16 +8,19 @@ RUN apt-get update \
 WORKDIR /usr/src/app
 COPY Gemfile* ./
 RUN bundle install
-COPY . .
 
-EXPOSE 3000
 RUN \
     # Create the folders if they don't exist
     mkdir -p     /usr/src/app/tmp/cache /var/log /var/run /var/tmp && \
     chgrp -R 0   /usr/src/app/tmp/cache /var/log /var/run /var/tmp && \
     chmod -R g=u,a+rx /usr/src/app/tmp/cache /var/log /var/run /var/tmp
   # Runs image as a non-root user in every environment, so that it runs consistently on AbarCloud and your development environment.
-  USER 1001
+
+
+COPY . .
+
+EXPOSE 3000
+USER 1001
 
 CMD ["rails", "server", "-b", "0.0.0.0"]
 
