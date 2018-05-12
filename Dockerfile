@@ -12,8 +12,7 @@ RUN chmod -R g=u,a+rx /var/log /var/run /var/tmp /usr/src/app /usr/src/app /usr/
 WORKDIR $RAILS_ROOT
 COPY . .
 RUN bundle install
-RUN bundle exec rake assets:precompile
-RUN mkdir -p log && chgrp -R 0 log && chmod -R g=u log
+
 
 
 
