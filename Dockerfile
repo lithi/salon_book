@@ -12,6 +12,7 @@ RUN chmod -R g=u,a+rx /var/log /var/run /var/tmp /usr/src/app /usr/src/app /usr/
 WORKDIR $RAILS_ROOT
 COPY . .
 RUN bundle install
+RUN exec bundle exec puma -C config/containers/puma.rb;
 
 
 
