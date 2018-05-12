@@ -13,10 +13,10 @@ WORKDIR $RAILS_ROOT
 COPY . .
 RUN bundle install
 
-
+EXPOSE 3000
 USER 1001
 
-CMD ["rails", "server", "-b", "0.0.0.0"]
+exec bundle exec puma -C config/puma.rb;
 
 
 
