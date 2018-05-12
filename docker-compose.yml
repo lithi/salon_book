@@ -1,0 +1,16 @@
+db: #این اسم را به عنوان پیش نیاز اپلیکیشن در ادامه آوردیم علاوه برا اینکه به عنوان  بخشی از کانکشن استرینگ هم استفاده خواهد شد
+  image: postgres:9.4.5
+  volumes:
+    - docker-docker-example-postgres:/var/lib/postgresql/data
+  ports: # مشخص کردیم دیتابیس روی چه پورتی بالا بیاد
+   - "5435"
+
+app:
+  build: .
+  env_file: .env
+  environment:
+    RAILS_ENV: $RAILS_ENV
+  links:
+    - db
+  ports:
+   - "3000:3000"

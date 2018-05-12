@@ -1,0 +1,22 @@
+default: &default
+  encoding: unicode
+  pool: 25
+  timeout: 5000
+
+development:
+  <<: *default
+  host: db 
+  adapter: postgresql
+  database: development
+  port: 5432
+  username: <%= ENV["DB_USERNAME"] %> 
+  password: <%= ENV["DB_PASSWORD"] %>
+
+production:
+  <<: *default
+  host: db
+  adapter: postgresql
+  database: production
+  port: 5432
+  username: <%= ENV["DB_USERNAME"] %> 
+  password: <%= ENV["DB_PASSWORD"] %>
