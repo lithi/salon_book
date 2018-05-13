@@ -1,1 +1,1 @@
-exec bundle exec puma -C config/puma.rb;
+exec puma -C config/puma.rb;
