@@ -15,7 +15,7 @@ RUN bundle install
 
 USER 1001
 
-CMD [ "config/app_cmd.sh" ]
+CMD [ "app_cmd.sh" ]
 
 
 
